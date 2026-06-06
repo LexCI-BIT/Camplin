@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -9,17 +10,17 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between backdrop-blur-md border-b border-white/5"
     >
-      <div className="flex items-center gap-2">
+      <Link to="/" className="flex items-center gap-2">
         <div className="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center font-bold text-white">
           C
         </div>
         <span className="text-xl font-bold tracking-tight">Camplin</span>
-      </div>
+      </Link>
 
       <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
         <a href="#" className="hover:text-white transition-colors">Courses</a>
         <a href="#" className="hover:text-white transition-colors">Programs</a>
-        <a href="#" className="hover:text-white transition-colors">Instructors</a>
+        <Link to="/mentor" className="hover:text-white transition-colors">Mentor</Link>
         <a href="#" className="hover:text-white transition-colors">About Us</a>
       </div>
 
